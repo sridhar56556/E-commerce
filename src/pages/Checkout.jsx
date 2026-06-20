@@ -6,8 +6,6 @@ import { Check, Lock, ShoppingBag, ArrowRight, CreditCard, Smartphone, Building,
 import { useCart } from '../context/CartContext'
 import { formatPrice } from '../data/products'
 
-const API = 'http://localhost:8787'
-
 const PAYMENT_METHODS = [
   {
     id: 'card',
@@ -145,6 +143,13 @@ export default function Checkout() {
     return e
   }
 
+  function generateOrderId() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    let id = 'LUM'
+    for (let i = 0; i < 8; i++) id += chars[Math.floor(Math.random() * chars.length)]
+    return id
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     const found = validate()
@@ -156,53 +161,55 @@ export default function Checkout() {
     setPlacing(true)
     const startTime = Date.now()
 
+    const order = {
+      id: generateOrderId(),
+      createdAt: new Date().toISOString(),
+      items: items.map((line) => ({
+        productId: line.id,
+        name: line.name,
+        price: line.price,
+        qty: line.qty,
+        size: line.size,
+        color: line.color,
+        image: line.image,
+      })),
+      shipping: {
+        name: form.name,
+        email: form.email,
+        address: form.address,
+        city: form.city,
+        postal: form.postal,
+        country: form.country,
+      },
+      payment: { method: paymentMethod },
+      subtotal,
+      shippingCost: shipping,
+      total,
+      status: 'confirmed',
+    }
+
     try {
-      const res = await fetch(`${API}/api/orders`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: items.map((line) => ({
-            id: line.id,
-            name: line.name,
-            price: line.price,
-            qty: line.qty,
-            size: line.size,
-            color: line.color,
-            image: line.image,
-          })),
-          shipping: {
-            name: form.name,
-            email: form.email,
-            address: form.address,
-            city: form.city,
-            postal: form.postal,
-            country: form.country,
-          },
-          payment: {
-            method: paymentMethod,
-            upiId: form.upiId,
-            bank: form.bank,
-          },
-        }),
-      })
+      const saved = JSON.parse(localStorage.getItem('lumiere.orders.v1') || '[]')
+      saved.unshift(order)
+      localStorage.setItem('lumiere.orders.v1', JSON.stringify(saved))
 
-      const data = await res.json()
-
-      if (data.success) {
-        const elapsed = Date.now() - startTime
-        const minDuration = 3500
-        if (elapsed < minDuration) {
-          await new Promise((r) => setTimeout(r, minDuration - elapsed))
-        }
-        clearCart()
-        setPlaced(true)
-        setOrderResult(data.order)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else {
-        setErrors({ _form: data.error || 'Something went wrong. Please try again.' })
+      const elapsed = Date.now() - startTime
+      const minDuration = 3500
+      if (elapsed < minDuration) {
+        await new Promise((r) => setTimeout(r, minDuration - elapsed))
       }
+      clearCart()
+      setPlaced(true)
+      setOrderResult({
+        id: order.id,
+        total: order.total,
+        status: order.status,
+        createdAt: order.createdAt,
+        items: order.items.length,
+      })
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch {
-      setErrors({ _form: 'Could not connect to the server. Make sure it is running (npm run server).' })
+      setErrors({ _form: 'Something went wrong. Please try again.' })
     } finally {
       setPlacing(false)
     }
