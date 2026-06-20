@@ -1,0 +1,388 @@
+/* =========================================================
+   Lumière — Design System & Global Styles
+   ========================================================= */
+
+:root {
+  /* Palette — warm editorial neutrals + champagne accent */
+  --cream: #f7f4ef;
+  --paper: #fffdf9;
+  --ink: #1c1a17;
+  --ink-soft: #4a463f;
+  --muted: #908b80;
+  --line: #e7e1d6;
+  --accent: #b07d4f;        /* warm bronze */
+  --accent-deep: #8a5e36;
+  --accent-soft: #e9d9c4;
+  --gold: #c8a26a;
+  --success: #4f7d57;
+  --danger: #b4452f;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Jost', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Shape & depth */
+  --radius-sm: 6px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(28, 26, 23, 0.06);
+  --shadow: 0 14px 40px rgba(28, 26, 23, 0.1);
+  --shadow-lg: 0 30px 70px rgba(28, 26, 23, 0.16);
+
+  /* Layout */
+  --container: 1280px;
+  --nav-h: 76px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----------------------------- Reset ----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: inherit;
+}
+
+/* ------------------------- Typography --------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+}
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.02;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+}
+
+.lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  font-weight: 300;
+}
+
+/* --------------------------- Layout ----------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 4vw, 3rem);
+}
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2.8rem;
+}
+
+.section-head.center {
+  align-items: center;
+  text-align: center;
+}
+
+/* --------------------------- Buttons ---------------------------- */
+.btn {
+  --btn-bg: var(--ink);
+  --btn-fg: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 2rem;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+    background 0.3s var(--ease), color 0.3s var(--ease);
+  isolation: isolate;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: translateY(100%);
+  transition: transform 0.45s var(--ease);
+  z-index: -1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  color: #fff;
+}
+
+.btn:hover::after {
+  transform: translateY(0);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn--light {
+  --btn-bg: var(--paper);
+  --btn-fg: var(--ink);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--lg {
+  padding: 1.15rem 2.6rem;
+}
+
+/* Text link with animated underline */
+.link-underline {
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  padding-bottom: 2px;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --------------------------- Badges ----------------------------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 100px;
+  background: var(--ink);
+  color: var(--paper);
+}
+.tag--accent { background: var(--accent); }
+.tag--sale { background: var(--danger); }
+.tag--soft { background: var(--accent-soft); color: var(--accent-deep); }
+
+/* --------------------------- Forms ------------------------------ */
+.field {
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  font-weight: 300;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(176, 125, 79, 0.12);
+}
+
+/* ------------------------- Utilities ---------------------------- */
+.text-center { text-align: center; }
+.muted { color: var(--muted); }
+.accent { color: var(--accent); }
+.divider { height: 1px; background: var(--line); border: 0; }
+
+.price {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.price--old {
+  color: var(--muted);
+  text-decoration: line-through;
+  font-weight: 300;
+  margin-right: 0.5rem;
+}
+
+/* Selection + scrollbar polish */
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+  background: #cfc6b6;
+  border-radius: 100px;
+  border: 3px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Lock scroll when a drawer/overlay is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* --------------------- Keyframe animations ---------------------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+/* Skeleton shimmer for image loading */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #ece6db 25%,
+    #f4efe6 37%,
+    #ece6db 63%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 768px) {
+  body { font-size: 0.94rem; }
+  .container { padding-inline: clamp(0.85rem, 3vw, 1.1rem); }
+  .section { padding-block: clamp(2.5rem, 6vw, 3.5rem); }
+  .section-head { gap: 0.6rem; margin-bottom: 1.8rem; }
+  .display { font-size: clamp(2rem, 8vw, 2.75rem); }
+  .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .lead { font-size: 0.95rem; }
+  .btn { padding: 0.8rem 1.4rem; font-size: 0.72rem; }
+  .btn--lg { padding: 0.95rem 1.8rem; }
+  .eyebrow { font-size: 0.65rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding-inline: 0.75rem; }
+  .section { padding-block: 2rem; }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

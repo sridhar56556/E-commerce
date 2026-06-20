@@ -1,0 +1,164 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__media {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #ece6db;
+}
+
+.card__imgwrap {
+  position: relative;
+}
+
+.card__img {
+  width: 100%;
+  display: block;
+}
+
+/* Badges */
+.card__badges {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 3;
+}
+
+/* Wishlist button */
+.card__wish {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 253, 249, 0.9);
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+  transition: color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.card__wish:hover {
+  background: #fff;
+  color: var(--danger);
+}
+
+.card__wish.is-active {
+  color: var(--danger);
+}
+
+/* Quick add */
+.card__quickadd {
+  position: absolute;
+  left: 0.8rem;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  background: rgba(28, 26, 23, 0.92);
+  color: var(--paper);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s var(--ease);
+}
+
+.card__quickadd:hover {
+  background: var(--accent);
+}
+
+/* Info */
+.card__info {
+  padding: 1rem 0.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.card__name {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.card__name a {
+  transition: color 0.3s var(--ease);
+}
+
+.card__name a:hover {
+  color: var(--accent);
+}
+
+.card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.card__rating svg {
+  color: var(--gold);
+}
+
+.card__price {
+  font-size: 0.98rem;
+}
+
+.card__swatches {
+  display: flex;
+  gap: 0.34rem;
+}
+
+.card__swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 26, 23, 0.18);
+  box-shadow: inset 0 0 0 2px var(--paper);
+}
+
+@media (max-width: 768px) {
+  .card__info { padding: 0.7rem 0.1rem 0; gap: 0.25rem; }
+  .card__name { font-size: 0.88rem; }
+  .card__price { font-size: 0.88rem; }
+  .card__rating { font-size: 0.72rem; }
+  .card__badges { top: 0.5rem; left: 0.5rem; }
+  .card__wish { top: 0.4rem; right: 0.4rem; width: 32px; height: 32px; }
+  .card__quickadd { left: 0.4rem; right: 0.4rem; bottom: 0.5rem; padding: 0.65rem; font-size: 0.65rem; }
+  .card__swatches { gap: 0.25rem; }
+  .card__swatch { width: 12px; height: 12px; }
+}
+
+@media (max-width: 480px) {
+  .card__info { padding: 0.5rem 0 0; }
+  .card__name { font-size: 0.82rem; }
+  .card__price { font-size: 0.82rem; }
+  .card__rating { font-size: 0.68rem; }
+}

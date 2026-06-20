@@ -1,0 +1,302 @@
+[
+  {
+    "id": "LUMEL8NMIWU",
+    "createdAt": "2026-06-20T10:47:09.999Z",
+    "items": [
+      {
+        "productId": "w-pink-saree",
+        "name": "Light Pink Saree",
+        "price": 6999,
+        "qty": 1,
+        "size": "XS",
+        "color": "Pink",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781949555/WhatsApp_Image_2026-06-20_at_3.25.32_PM_-_Copy_ucgoyp.jpg"
+      },
+      {
+        "productId": "w-personal-7",
+        "name": "Embellished Crop Top Set",
+        "price": 5499,
+        "qty": 3,
+        "size": "XS",
+        "color": "Gold",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781950893/WhatsApp_Image_2026-06-20_at_3.50.20_PM_o5el3a.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "card"
+    },
+    "subtotal": 23496,
+    "shippingCost": 0,
+    "total": 23496,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUMEUHHBOG7",
+    "createdAt": "2026-06-20T10:37:50.729Z",
+    "items": [
+      {
+        "productId": "s-loafers",
+        "name": "Dune Leather Loafers",
+        "price": 10880,
+        "qty": 1,
+        "size": "38",
+        "color": "Tan",
+        "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&h=1000&q=80"
+      },
+      {
+        "productId": "a-sunglasses",
+        "name": "Riviera Acetate Sunglasses",
+        "price": 6880,
+        "qty": 1,
+        "size": "One Size",
+        "color": "Amber",
+        "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&h=1000&q=80"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "cod"
+    },
+    "subtotal": 17760,
+    "shippingCost": 0,
+    "total": 17760,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUML3RMQTI5",
+    "createdAt": "2026-06-20T10:35:16.779Z",
+    "items": [
+      {
+        "productId": "w-pink-saree",
+        "name": "Light Pink Saree",
+        "price": 6999,
+        "qty": 2,
+        "size": "XS",
+        "color": "Pink",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781949555/WhatsApp_Image_2026-06-20_at_3.25.32_PM_-_Copy_ucgoyp.jpg"
+      },
+      {
+        "productId": "w-personal-2",
+        "name": "Embroidered Lehenga Set",
+        "price": 8499,
+        "qty": 1,
+        "size": "XS",
+        "color": "Teal",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781950894/WhatsApp_Image_2026-06-20_at_3.50.22_PM_1_nz6dtw.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "Sridhar Konda",
+      "email": "sridharkonda553@gmail.com",
+      "address": "KPHB 1/90",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "cod"
+    },
+    "subtotal": 22497,
+    "shippingCost": 0,
+    "total": 22497,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUM0ESK5XG3",
+    "createdAt": "2026-06-20T10:34:44.732Z",
+    "items": [
+      {
+        "productId": "w-personal-1",
+        "name": "Floral Anarkali Kurti",
+        "price": 3499,
+        "qty": 1,
+        "size": "XS",
+        "color": "Multicolor",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781950894/WhatsApp_Image_2026-06-20_at_3.50.21_PM_bq39bh.jpg"
+      },
+      {
+        "productId": "m-personal-3",
+        "name": "Remo Urban Jacket",
+        "price": 18400,
+        "qty": 1,
+        "size": "XS",
+        "color": "Black",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1761137686/remo5_j8nzze.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "cod"
+    },
+    "subtotal": 21899,
+    "shippingCost": 0,
+    "total": 21899,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUMLDHMCZZH",
+    "createdAt": "2026-06-20T10:32:18.952Z",
+    "items": [
+      {
+        "productId": "w-casual",
+        "name": "Jeans & Shirt",
+        "price": 3999,
+        "qty": 1,
+        "size": "XS",
+        "color": "Blue",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781949553/WhatsApp_Image_2026-06-20_at_3.25.35_PM_sh8yw8.jpg"
+      },
+      {
+        "productId": "m-personal-3",
+        "name": "Remo Urban Jacket",
+        "price": 18400,
+        "qty": 1,
+        "size": "XS",
+        "color": "Black",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1761137686/remo5_j8nzze.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "cod"
+    },
+    "subtotal": 22399,
+    "shippingCost": 0,
+    "total": 22399,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUMABSANNJW",
+    "createdAt": "2026-06-20T10:29:50.054Z",
+    "items": [
+      {
+        "productId": "s-runner",
+        "name": "Vela Low Runner",
+        "price": 145,
+        "qty": 2,
+        "size": "40",
+        "color": "Off-White",
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&h=1000&q=80"
+      },
+      {
+        "productId": "a-leather-bag",
+        "name": "Margaux Leather Tote",
+        "price": 240,
+        "qty": 1,
+        "size": "One Size",
+        "color": "Black",
+        "image": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=800&h=1000&q=80"
+      },
+      {
+        "productId": "m-personal-7",
+        "name": "Premium Formal Blazer",
+        "price": 26400,
+        "qty": 1,
+        "size": "XS",
+        "color": "Black",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781948810/IMG-20250719-WA0004_jc3vtk.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "cod"
+    },
+    "subtotal": 26930,
+    "shippingCost": 0,
+    "total": 26930,
+    "status": "confirmed"
+  },
+  {
+    "id": "LUMLNYINZKJ",
+    "createdAt": "2026-06-20T10:28:24.801Z",
+    "items": [
+      {
+        "productId": "s-runner",
+        "name": "Vela Low Runner",
+        "price": 145,
+        "qty": 1,
+        "size": "40",
+        "color": "Off-White",
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&h=1000&q=80"
+      },
+      {
+        "productId": "a-leather-bag",
+        "name": "Margaux Leather Tote",
+        "price": 240,
+        "qty": 1,
+        "size": "One Size",
+        "color": "Black",
+        "image": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=800&h=1000&q=80"
+      },
+      {
+        "productId": "w-casual",
+        "name": "Jeans & Shirt",
+        "price": 3999,
+        "qty": 1,
+        "size": "XS",
+        "color": "Blue",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1781949553/WhatsApp_Image_2026-06-20_at_3.25.35_PM_sh8yw8.jpg"
+      },
+      {
+        "productId": "m-personal-3",
+        "name": "Remo Urban Jacket",
+        "price": 18400,
+        "qty": 1,
+        "size": "XS",
+        "color": "Black",
+        "image": "https://res.cloudinary.com/dgaqfgszr/image/upload/v1761137686/remo5_j8nzze.jpg"
+      }
+    ],
+    "shipping": {
+      "name": "konda sridhar",
+      "email": "sridharkonda553@gmail.com",
+      "address": "rampur, Huzurabad, Karimnagar",
+      "city": "Huzurabad",
+      "postal": "505468",
+      "country": "India"
+    },
+    "payment": {
+      "method": "netbanking"
+    },
+    "subtotal": 22784,
+    "shippingCost": 0,
+    "total": 22784,
+    "status": "confirmed"
+  }
+]

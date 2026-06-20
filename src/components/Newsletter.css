@@ -1,0 +1,71 @@
+.news {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.news__inner {
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news .eyebrow {
+  color: var(--gold);
+}
+
+.news .section-title {
+  color: #fff;
+}
+
+.news__lead {
+  color: rgba(247, 244, 239, 0.72);
+  max-width: 500px;
+}
+
+.news__form {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.news__input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.news__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.news__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(200, 162, 106, 0.15);
+}
+
+.news__form .btn {
+  --btn-bg: var(--paper);
+  --btn-fg: var(--ink);
+  flex-shrink: 0;
+}
+
+.news__ok {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .news__form {
+    flex-direction: column;
+  }
+}

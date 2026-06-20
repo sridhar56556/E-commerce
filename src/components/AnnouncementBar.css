@@ -1,0 +1,33 @@
+.announce {
+  background: var(--ink);
+  color: var(--cream);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.announce__track {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.6rem;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.announce:hover .announce__track {
+  animation-play-state: paused;
+}
+
+.announce__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.announce__dot {
+  margin-inline: 2.4rem;
+  color: var(--accent);
+  font-size: 0.7rem;
+}
